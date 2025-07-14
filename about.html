@@ -10,6 +10,7 @@
       --green: #01a982;
       --teal:  #003333;
       --gray:  #f5f7f8;
+      --partner-bg: #f8fafb;
     }
     @font-face {
       font-family: 'Aptos';
@@ -26,132 +27,66 @@
       color: #333;
     }
     a { color: inherit; text-decoration: none; }
-  </style>
-</head>
-<body>
 
-  <!-- ─── SITE HEADER ─────────────────────────────────────────────────── -->
-<style>
-  @font-face {
-    font-family: 'Aptos';
-    src: url('/fonts/Aptos-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-    font-display: swap;
-  }
-
-  body {
-    font-family: 'Aptos', sans-serif;
-    padding-top: 70px; /* keep content below fixed header */
-  }
-
-  .main-header {
-    background: #f9fcfe;
-    border-bottom: 1px solid #d8e6f0;
-    box-shadow: 0 2px 6px rgba(0,80,160,0.04);
-    position: fixed;
-    top: 0; left: 0; width: 100%; z-index: 99;
-    padding: 0;
-  }
-  .header-inner {
-    max-width: 100vw;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 70px;
-    padding: 0 15px;
-  }
-  .header-logo img {
-    height: 56px;
-    width: auto;
-    display: block;
-  }
-  .header-links-group {
-    display: flex;
-    align-items: center;
-    gap: 1.3rem;
-  }
-  .header-nav {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: wrap;
-  }
-  .header-nav a {
-    color: #0075c2;
-    text-decoration: none;
-    font-weight: 500;
-    padding: .18rem .45rem;
-    border-radius: .2rem;
-    font-size: 1.09rem;
-    transition: background 0.15s;
-  }
-  .header-nav a:hover {
-    background: #e6f3fa;
-  }
-  .header-login .login-btn {
-    background: #0af;
-    color: #fff;
-    padding: .32rem 1rem;
-    border-radius: .4rem;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
-    box-shadow: 0 1px 8px rgba(0,175,255,0.09);
-    transition: background 0.13s;
-  }
-  .header-login .login-btn:hover {
-    background: #0075c2;
-  }
-  @media (max-width: 900px) {
-    .header-inner {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.2rem;
-      height: auto;
-      padding: 0 .5rem;
+    /* ─── SITE HEADER ─────────────────────────────────────────────────── */
+    .main-header {
+      background: #f9fcfe;
+      border-bottom: 1px solid #d8e6f0;
+      box-shadow: 0 2px 6px rgba(0,80,160,0.04);
+      position: fixed;
+      top: 0; left: 0; width: 100%; z-index: 99;
     }
-    .header-links-group {
-      width: 100%;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: .7rem;
+    .header-inner {
+      max-width: 100vw;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 70px;
+      padding: 0 15px;
+    }
+    .header-logo img {
+      height: 56px;
+      width: auto;
     }
     .header-nav {
+      display: flex;
+      gap: 1.25rem;
       flex-wrap: wrap;
-      gap: .7rem;
     }
-  }
-</style>
+    .header-nav a {
+      color: #0075c2;
+      font-weight: 500;
+      padding: .18rem .45rem;
+      border-radius: .2rem;
+      transition: background 0.15s;
+    }
+    .header-nav a:hover {
+      background: #e6f3fa;
+    }
+    .login-btn {
+      background: #0af;
+      color: #fff;
+      padding: .32rem 1rem;
+      border-radius: .4rem;
+      font-weight: bold;
+      box-shadow: 0 1px 8px rgba(0,175,255,0.09);
+      transition: background 0.13s;
+    }
+    .login-btn:hover { background: #0075c2; }
 
-<header class="main-header">
-  <div class="header-inner">
-    <a href="index.html" class="header-logo">
-      <img src="logo_5.png" alt="11-Health Logo">
-    </a>
-    <div class="header-links-group">
-      <nav class="header-nav">
-        <a href="about.html">About Us</a>
-        <a href="explore-packages.html">Our Health Programs</a>
-        <a href="for-you.html">Is 11-Health for You?</a>
-        <a href="blogs.html">Discover More</a>
-        <a href="concierge.html">Connect with Us</a>
-      </nav>
-      <div class="header-login">
-        <a href="login.html" class="login-btn">Member Log-In</a>
-      </div>
-    </div>
-  </div>
-</header>
-  <!-- ─── HERO BANNER ────────────────────────────────────────────────── -->
-  <header class="page-hero">
-    <h1>About 11-Health</h1>
-    <p>
-      Independent, physician-led second-opinion and preventive-care coordination—helping patients worldwide
-      <strong>know more, live better, and extend their healthspan</strong>.
-    </p>
-  </header>
-  <style>
+    @media (max-width: 900px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .5rem;
+        padding: .5rem;
+        height: auto;
+      }
+      .header-nav { gap: .7rem; }
+    }
+
+    /* ─── HERO BANNER ────────────────────────────────────────────────── */
     .page-hero {
       background: var(--teal);
       color: #fff;
@@ -169,23 +104,8 @@
       line-height: 1.4;
     }
     .page-hero p strong { font-weight: 700; }
-  </style>
 
-
-  <!-- ─── WHY WE BUILT 11-HEALTH ─────────────────────────────────────── -->
-  <section class="why-built">
-    <h2>Why We Built 11-Health</h2>
-    <p>At 11-Health, we believe better health starts with better information.</p>
-    <p>As demand grows for preventive care, early detection, and diagnostic clarity, we identified two key barriers:</p>
-    <ul>
-      <li>The high cost of established programs at traditional institutions</li>
-      <li>The complexity and time involved in coordinating fragmented services across multiple providers</li>
-    </ul>
-    <p>We set out to change that.</p>
-    <p>What if you could access reliable, clinically rigorous diagnostics—all in one place, customized to your needs and budget, with centralized results and coordination with your physicians back home?</p>
-    <p>11-Health exists to make world-class diagnostic and wellness services more accessible, personalized, and empowering—without compromising on quality. From comprehensive labs to advanced imaging and genetic analysis, we’re here to support your entire health journey.</p>
-  </section>
-  <style>
+    /* ─── WHY WE BUILT 11-HEALTH ─────────────────────────────────────── */
     .why-built {
       max-width: 900px;
       margin: 2rem auto 3rem;
@@ -198,36 +118,18 @@
       color: var(--teal);
       margin-bottom: .75rem;
     }
-    .why-built p {
-      margin-bottom: 1rem;
+    .why-built p,
+    .why-built li {
       font-size: 1.1rem;
+      margin-bottom: 1rem;
       color: #333;
     }
     .why-built ul {
-      margin: 1rem 0;
       padding-left: 1.5rem;
       list-style: disc;
-      color: #333;
     }
-    .why-built li {
-      margin-bottom: .5rem;
-      font-size: 1.1rem;
-    }
-  </style>
 
-
-  <!-- ─── COLLABORATIVE PLATFORM ──────────────────────────────────────── -->
-  <section class="partners">
-    <h2>A Collaborative Platform Built for You</h2>
-    <ul class="partners-list">
-      <li><strong>IHC (International Healthcare Corp):</strong> A respected global healthcare operator and investor with deep experience in building patient-centered programs</li>
-      <li><strong>Hospital CIMA:</strong> Costa Rica’s most trusted private hospital, internationally accredited for its clinical excellence</li>
-      <li><strong>Medical Tours Costa Rica:</strong> The country’s leading facilitator of international patient services and recovery coordination</li>
-    </ul>
-    <p>Together, we’ve created an integrated platform that combines clinical rigor, personalized service, and Costa Rica’s world-class medical ecosystem—all focused on delivering real value for your investment in health.</p>
-    <p>Whether you’re collaborating with your personal physician, traveling with family, or seeking a wellness reset, 11-Health puts the power of information—and the confidence to act—back in your hands.</p>
-  </section>
-  <style>
+    /* ─── COLLABORATIVE PLATFORM ──────────────────────────────────────── */
     .partners {
       max-width: 900px;
       margin: 0 auto 3rem;
@@ -239,30 +141,42 @@
       font-size: 1.75rem;
       color: var(--teal);
       margin-bottom: .75rem;
+      text-align: center;
     }
-    .partners-list {
-      margin: 1rem 0;
-      padding-left: 1.5rem;
-      list-style: disc;
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .partner-card {
+      background: var(--partner-bg);
+      border-radius: 0.75rem;
+      box-shadow: 0 2px 12px rgba(0,80,160,0.04);
+      padding: 1.5rem;
+      text-align: center;
+    }
+    .partner-logo {
+      width: 80px;
+      height: auto;
+      margin: 0 auto 1rem;
+    }
+    .partner-logo img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    .partner-text {
+      font-size: 1.05rem;
       color: #333;
+      line-height: 1.4;
     }
-    .partners-list li {
-      margin-bottom: .75rem;
-      font-size: 1.1rem;
+    .partner-text strong {
+      color: var(--teal);
     }
-    .partners p {
-      margin-bottom: 1rem;
-      font-size: 1.1rem;
-      color: #333;
-    }
-  </style>
 
-
-  <!-- ─── FOOTER ───────────────────────────────────────────────────────── -->
-  <footer class="footer">
-    © 2025 11-Health. Independent second-opinion &amp; preventive-care coordination. All rights reserved.
-  </footer>
-  <style>
+    /* ─── FOOTER ───────────────────────────────────────────────────────── */
     .footer {
       background: var(--gray);
       padding: 2rem 1rem;
@@ -271,6 +185,93 @@
       color: #666;
     }
   </style>
+</head>
+<body>
+
+  <!-- SITE HEADER -->
+  <header class="main-header">
+    <div class="header-inner">
+      <a href="index.html" class="header-logo">
+        <img src="logo_5.png" alt="11-Health Logo">
+      </a>
+      <nav class="header-nav">
+        <a href="about.html">About Us</a>
+        <a href="explore-packages.html">Our Health Programs</a>
+        <a href="for-you.html">Is 11-Health for You?</a>
+        <a href="blogs.html">Discover More</a>
+        <a href="concierge.html">Connect with Us</a>
+      </nav>
+      <a href="login.html" class="login-btn">Member Log-In</a>
+    </div>
+  </header>
+
+  <!-- HERO BANNER -->
+  <header class="page-hero">
+    <h1>About 11-Health</h1>
+    <p>
+      Independent, physician-led second-opinion and preventive-care coordination—helping patients worldwide
+      <strong>know more, live better, and extend their healthspan</strong>.
+    </p>
+  </header>
+
+  <!-- WHY WE BUILT 11-HEALTH -->
+  <section class="why-built">
+    <h2>Why We Built 11-Health</h2>
+    <p>At 11-Health, we believe better health starts with better information.</p>
+    <p>As demand grows for preventive care, early detection, and diagnostic clarity, we identified two key barriers:</p>
+    <ul>
+      <li>The high cost of established programs at traditional institutions</li>
+      <li>The complexity and time involved in coordinating fragmented services across multiple providers</li>
+    </ul>
+    <p>We set out to change that.</p>
+    <p>What if you could access reliable, clinically rigorous diagnostics—all in one place, customized to your needs and budget, with centralized results and coordination with your physicians back home?</p>
+    <p>11-Health exists to make world-class diagnostic and wellness services more accessible, personalized, and empowering—without compromising on quality. From comprehensive labs to advanced imaging and genetic analysis, we’re here to support your entire health journey.</p>
+  </section>
+
+  <!-- COLLABORATIVE PLATFORM -->
+  <section class="partners">
+    <h2>A Collaborative Platform Built for You</h2>
+    <div class="partners-grid">
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="ihc.png" alt="IHC Logo">
+        </div>
+        <div class="partner-text">
+          <strong>IHC (International Healthcare Corp)</strong><br>
+          A respected global healthcare operator and investor with deep experience in building patient-centered programs.
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="cima.png" alt="Hospital CIMA Logo">
+        </div>
+        <div class="partner-text">
+          <strong>Hospital CIMA</strong><br>
+          Costa Rica’s most trusted private hospital, internationally accredited for its clinical excellence.
+        </div>
+      </div>
+      <div class="partner-card">
+        <div class="partner-logo">
+          <img src="med-tours.png" alt="Medical Tours Costa Rica Logo">
+        </div>
+        <div class="partner-text">
+          <strong>Medical Tours Costa Rica</strong><br>
+          The country’s leading facilitator of international patient services and recovery coordination.
+        </div>
+      </div>
+    </div>
+    <p style="margin-top:2rem; text-align:center;">
+      Together, we’ve created an integrated platform that combines clinical rigor, personalized service, and Costa Rica’s world-class medical ecosystem—all focused on delivering real value for your investment in health.
+    </p>
+    <p style="text-align:center;">
+      Whether you’re collaborating with your personal physician, traveling with family, or seeking a wellness reset, 11-Health puts the power of information—and the confidence to act—back in your hands.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    © 2025 11-Health. Independent second-opinion &amp; preventive-care coordination. All rights reserved.
+  </footer>
 
 </body>
 </html>
